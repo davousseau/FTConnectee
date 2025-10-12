@@ -1,0 +1,8 @@
+﻿<!--
+    Description :   Couleurs du thème clair.
+    Auteur :        David Brousseau
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+</ResourceDictionary>
