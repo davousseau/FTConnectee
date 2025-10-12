@@ -1,0 +1,123 @@
+﻿<!--
+    Description :   Bouton scindé de sauvegarde des modifications en cours.
+    Auteur :        David Brousseau
+-->
+<UserControl x:Class="FTConnectee.SaveSplitButtonControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:FTConnectee"
+             mc:Ignorable="d">
+
+    <UserControl.Resources>
+        
+        <!--#region Style de base du bouton.-->
+        <Style x:Key="BaseButtonStyle"
+               TargetType="Button">
+            <Setter Property="Background"
+                    Value="{StaticResource DefaultBackgroundBrush}" />
+            <Setter Property="BorderBrush"
+                    Value="{StaticResource DefaultBorderBrush}" />
+            <Setter Property="Foreground"
+                    Value="{StaticResource DefaultForegroundBrush}" />
+            <Setter Property="Cursor"
+                    Value="Hand" />
+            <Setter Property="FontSize"
+                    Value="14" />
+            <Setter Property="MinHeight"
+                    Value="30" />
+            <Setter Property="MinWidth"
+                    Value="100" />
+        </Style>
+        <!--#endregion-->
+
+        <!--#region Déclencheurs de style.-->
+        <!--Le Tag est utilisé pour transmettre le CornerRadius, car le TemplateBinding ne prend pas en charge ce type de propriété complexe.-->
+        <ControlTemplate x:Key="SplitButtonTemplate"
+                         TargetType="Button">
+            <Border x:Name="ButtonBorder"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="{Binding Path=Tag, RelativeSource={RelativeSource Mode=TemplatedParent}}">
+                <ContentPresenter Content="{TemplateBinding Content}"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center" />
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver"
+                         Value="True">
+                    <Setter TargetName="ButtonBorder"
+                            Property="Background"
+                            Value="{StaticResource HoverBackgroundBrush}" />
+                    <Setter TargetName="ButtonBorder"
+                            Property="BorderBrush"
+                            Value="{StaticResource HoverBorderBrush}" />
+                    <Setter Property="Foreground"
+                            Value="{StaticResource HoverForegroundBrush}" />
+                </Trigger>
+                <Trigger Property="IsPressed"
+                         Value="True">
+                    <Setter TargetName="ButtonBorder"
+                            Property="Background"
+                            Value="{StaticResource PressedBackgroundBrush}" />
+                    <Setter TargetName="ButtonBorder"
+                            Property="BorderBrush"
+                            Value="{StaticResource PressedBorderBrush}" />
+                    <Setter Property="Foreground"
+                            Value="{StaticResource PressedForegroundBrush}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <!--#endregion-->
+
+        <!--#region Style du bouton Annuler.-->
+        <Style x:Key="CancelButtonStyle"
+               TargetType="Button"
+               BasedOn="{StaticResource BaseButtonStyle}">
+            <Setter Property="Template"
+                    Value="{StaticResource SplitButtonTemplate}" />
+            <Setter Property="BorderThickness"
+                    Value="1,1,0.5,1" />
+            <Setter Property="Tag"
+                    Value="5,0,0,5" />
+        </Style>
+        <!--#endregion-->
+
+        <!--#region Style du bouton Enregistrer.-->
+        <Style x:Key="SaveButtonStyle"
+               TargetType="Button"
+               BasedOn="{StaticResource BaseButtonStyle}">
+            <Setter Property="Template"
+                    Value="{StaticResource SplitButtonTemplate}" />
+            <Setter Property="BorderThickness"
+                    Value="0.5,1,1,1" />
+            <Setter Property="Tag"
+                    Value="0,5,5,0" />
+        </Style>
+        <!--#endregion-->
+
+    </UserControl.Resources>
+
+    <Grid MinHeight="30"
+          MinWidth="200">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!--#region Agencement des boutons.-->
+        <Button Content="Annuler"
+                Grid.Column="0"
+                Style="{StaticResource CancelButtonStyle}"
+                ToolTip="Annuler la saisie." />
+
+        <Button Content="Enregistrer"
+                Grid.Column="1"
+                Style="{StaticResource SaveButtonStyle}"
+                ToolTip="Enregistrer les modifications." />
+        <!--#endregion-->
+        
+    </Grid>
+</UserControl>

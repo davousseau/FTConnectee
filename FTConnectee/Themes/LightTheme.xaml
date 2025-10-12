@@ -5,4 +5,35 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
+    <!--#region Styles du bouton.-->
+    
+    <!--#region Palette du bouton par défaut.-->
+    <SolidColorBrush x:Key="DefaultBackgroundBrush"
+                     Color="White" />
+    <SolidColorBrush x:Key="DefaultBorderBrush"
+                     Color="Goldenrod" />
+    <SolidColorBrush x:Key="DefaultForegroundBrush"
+                     Color="navy" />
+    <!--#endregion-->
+
+    <!--#region Palette de survol du bouton.-->
+    <SolidColorBrush x:Key="HoverBackgroundBrush"
+                     Color="Goldenrod" />
+    <SolidColorBrush x:Key="HoverBorderBrush"
+                     Color="Goldenrod" />
+    <SolidColorBrush x:Key="HoverForegroundBrush"
+                     Color="White" />
+    <!--#endregion-->
+
+    <!--#Region Palette de clic du bouton.-->
+    <SolidColorBrush x:Key="PressedBackgroundBrush"
+                     Color="Goldenrod" />
+    <SolidColorBrush x:Key="PressedBorderBrush"
+                     Color="Navy" />
+    <SolidColorBrush x:Key="PressedForegroundBrush"
+                     Color="Navy" />
+    <!--#endregion-->
+    
+    <!--#endregion-->
+    
 </ResourceDictionary>
