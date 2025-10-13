@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace FTConnectee
 {
     /// <summary>
-    /// Logique d'interaction pour SaveSplitButtonControl.xaml
+    /// Logique d'interaction pour CancelSaveSplitButtonControl.xaml
     /// </summary>
-    public partial class SaveSplitButtonControl : UserControl
+    public partial class CancelSaveSplitButtonControl : UserControl
     {
-        public SaveSplitButtonControl()
+        public CancelSaveSplitButtonControl()
         {
             InitializeComponent();
         }
