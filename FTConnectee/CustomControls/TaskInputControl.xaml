@@ -10,7 +10,9 @@
           MinWidth="300">
         <Grid.Resources>
 
-            <!--#region Modèle du textbox scindé.-->
+            <!--#region Modèle du contrôle scindé.-->
+            
+            <!--#region Modèle du textbox DescriptionBox.-->
             <ControlTemplate x:Key="SplitTextBoxTemplate"
                              TargetType="TextBox">
                 <Border x:Name="Border"
@@ -28,7 +30,7 @@
             </ControlTemplate>
             <!--#endregion-->
 
-            <!--#region Modèle du bouton scindé.-->
+            <!--#region Modèle du bouton OpenDialogButton.-->
             <ControlTemplate x:Key="SplitButtonTemplate"
                              TargetType="Button">
                 
@@ -42,10 +44,10 @@
                                       VerticalAlignment="Center" />
                 </Border>
                 
-                <!--#region Déclencheurs de style du bouton scindé.-->
+                <!--#region Déclencheurs de style du bouton.-->
                 <ControlTemplate.Triggers>
                     
-                    <!--#region Style de survol du bouton scindé.-->
+                    <!--#region Style de survol du bouton.-->
                     <Trigger Property="IsMouseOver"
                              Value="True">
                         <Setter TargetName="ButtonBorder"
@@ -59,7 +61,7 @@
                     </Trigger>
                     <!--#endregion-->
                     
-                    <!--#region Style de clic du bouton scindé.-->
+                    <!--#region Style de clic du bouton.-->
                     <Trigger Property="IsPressed"
                              Value="True">
                         <Setter TargetName="ButtonBorder"
@@ -77,6 +79,8 @@
                 <!--#endregion-->
                 
             </ControlTemplate>
+            <!--#endregion-->
+            
             <!--#endregion-->
 
             <!--#region Style du textbox DescriptionBox-->
