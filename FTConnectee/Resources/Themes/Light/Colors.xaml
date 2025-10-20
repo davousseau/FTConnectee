@@ -1,0 +1,21 @@
+﻿<!--
+    Fichier : Colors.Light.xaml
+    Description : Dictionnaire de couleurs pour le thème clair.
+    Auteur : David Brousseau
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--#region Couleurs du bouton primaire.-->
+    <Color x:Key="Primary.Button.Hover.Background.Color">goldenrod</Color>
+    <Color x:Key="Primary.Button.Hover.Border.Color">goldenrod</Color>
+    <Color x:Key="Primary.Button.Hover.Foreground.Color">white</Color>
+    <Color x:Key="Primary.Button.Normal.Background.Color">white</Color>
+    <Color x:Key="Primary.Button.Normal.Border.Color">goldenrod</Color>
+    <Color x:Key="Primary.Button.Normal.Foreground.Color">navy</Color>
+    <Color x:Key="Primary.Button.Pressed.Background.Color">goldenrod</Color>
+    <Color x:Key="Primary.Button.Pressed.Border.Color">navy</Color>
+    <Color x:Key="Primary.Button.Pressed.Foreground.Color">navy</Color>
+    <!--#endregion-->
+    
+</ResourceDictionary>

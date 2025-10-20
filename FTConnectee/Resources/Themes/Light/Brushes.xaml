@@ -1,0 +1,30 @@
+﻿<!--
+    Fichier : Brushes.Light.xaml
+    Description : Dictionnaire de pinceaux pour le thème clair.
+    Auteur : David Brousseau
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--#region Pinceaux du bouton primaire.-->
+    <SolidColorBrush x:Key="PrimaryButtonHoverBackgroundBrush"
+                     Color="{StaticResource Primary.Button.Hover.Background.Color}" />
+    <SolidColorBrush x:Key="PrimaryButtonHoverBorderBrush"
+                     Color="{StaticResource Primary.Button.Hover.Border.Color}" />
+    <SolidColorBrush x:Key="PrimaryButtonHoverForegroundBrush"
+                     Color="{StaticResource Primary.Button.Hover.Foreground.Color}" />
+    <SolidColorBrush x:Key="PrimaryButtonNormalBackgroundBrush"
+                     Color="{StaticResource Primary.Button.Normal.Background.Color}" />
+    <SolidColorBrush x:Key="PrimaryButtonNormalBorderBrush"
+                     Color="{StaticResource Primary.Button.Normal.Border.Color}" />
+    <SolidColorBrush x:Key="PrimaryButtonNormalForegroundBrush"
+                     Color="{StaticResource Primary.Button.Normal.Foreground.Color}" />
+    <SolidColorBrush x:Key="PrimaryButtonPressedBackgroundBrush"
+                     Color="{StaticResource Primary.Button.Pressed.Background.Color}" />
+    <SolidColorBrush x:Key="PrimaryButtonPressedBorderBrush"
+                     Color="{StaticResource Primary.Button.Pressed.Border.Color}" />
+    <SolidColorBrush x:Key="PrimaryButtonPressedForegroundBrush"
+                     Color="{StaticResource Primary.Button.Pressed.Foreground.Color}" />
+    <!--#endregion-->
+
+</ResourceDictionary>

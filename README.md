@@ -1,1 +1,2 @@
 # FTConnectee
+Le dossier [Notes](./Notes) contient des éléments d’apprentissage et des repères techniques accumulés pendant le développement de ce projet. Il sert de référence évolutive pour documenter les essais, les découvertes et les ajustements réalisés au fil du temps.

@@ -1,0 +1,11 @@
+﻿<!--
+    Fichier : Colors.Dark.xaml
+    Description : Dictionnaire de couleurs pour le thème sombre.
+    Auteur : David Brousseau
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--TODO: Ajouter les couleurs ici.-->
+
+</ResourceDictionary>
